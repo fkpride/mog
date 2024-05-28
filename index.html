@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOG on SOL</title>
+    <link rel="icon" href="src/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Londrina+Solid&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrolling */
+            position: relative;
+            height: 100vh;
+            font-family: "Londrina Sketch", sans-serif; /* Change font to Londrina Sketch */
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("src/bg-mobile.jpeg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            filter: blur(8px); /* Apply blur effect */
+            z-index: -1; /* Place it behind other content */
+        }
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white; /* White background */
+            border: 2px solid black; /* Black outline */
+            border-radius: 10px; /* Rounded edges */
+            z-index: 2; /* Place it above other content */
+            opacity: 0.8;
+            width: 80vw;
+            margin: 8vw;
+        }
+        
+        .header-text {
+            font-size: 24px;
+            color: black;
+            cursor: pointer; /* Add cursor pointer to text */
+            opacity: 1;
+            text-decoration: none;
+        }
+
+        .header-text:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            display: flex;
+            position: absolute;
+            top: 12px;
+            right: 20px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: black;
+            margin-left: 15px; /* Increased margin */
+            cursor: pointer; /* Add cursor pointer to social icons */
+        }
+        .social-icons a:hover {
+            color: blue; /* Change color on hover */
+        }
+        .social-icons i {
+            font-size: 24px; /* Increase icon size */
+        }
+        .text-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            font-size: 10vw; /* Responsive font size */
+            pointer-events: none; /* Make the text non-interactive */
+            z-index: 1; /* Place it above the blurred background */
+            transform: rotate(-5deg); /* Add a tilt to the text overlay */
+            color: white; /* Apply white color to the text */
+            -webkit-background-clip: text; /* Apply gradient to text */
+            background-clip: text;
+        }
+        .text-overlay div {
+            opacity: 0.33;
+            flex: 1 0 20%; /* Adjust this value to control the density of the text */
+            text-align: center;
+        }
+        .gif-container {
+            opacity: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+        }
+        .gif-container img {
+            margin: 10px;
+            max-width: calc(50% - 20px); /* Two images per row with equal margins */
+        }
+
+        .buy-button {
+            position: absolute;
+            opacity: 1;
+            top: 40vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: "Londrina Outline", sans-serif;
+            background-color: orange;
+            border: none;
+            color: white;
+            padding: 20px 40px;
+            font-size: 3rem;
+            cursor: pointer;
+            border-radius: 10px;
+            z-index: 2;
+        }
+
+        .buy-button:hover {
+            background-color: darkorange;
+        }
+
+        .buybtn {
+            color: white;
+            text-decoration: none;
+        }
+        
+        buybtn:visited {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="https://dexscreener.com/solana/gg6gs8ejhtejdctsgl8dirbphxdsn4akajc7c7r5zzj1" class="header-text">Ca: &#160 BbYV28CUZQxrmi7CYkvfA1rrCsu8KcvkFrqdeXmfnd61</a>
+        <div class="social-icons">
+            <a href="https://x.com/MOG_ON_SOL_"><i class="fab fa-twitter"></i></a>
+            <a href="https://t.me/mogctosol"><i class="fab fa-telegram"></i></a>
+        </div>
+        <button class="buy-button"><a href="https://dexscreener.com/solana/gg6gs8ejhtejdctsgl8dirbphxdsn4akajc7c7r5zzj1"" class="buybtn">BUY $MOG ON SOL</a></button>
+    </div>
+    <div class="text-overlay">
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+        <div>$MOG</div>
+
+    </div>
+    <div class="gif-container">
+
+        <img src="src/jammies.gif" alt="Jammies GIF">
+        <img src="src/gun.gif" alt="Gun GIF">
+        <img src="src/party-blob.gif" alt="Party Blob GIF">
+        <img src="src/party-parrot.gif" alt="Party Parrot GIF">
+        <img src="src/pet.gif" alt="Pet GIF">
+        <img src="src/shake.gif" alt="Shake GIF">
+        <img src="src/jam.gif" alt="Jam GIF">
+        <img src="src/burn.gif" alt="Burn GIF">
+        <img src="src/scroll.gif" alt="Zoom In GIF">
+        <img src="src/nyan-cat.gif" alt="Zoom Out GIF">
+        <img src="src/bounce.gif" alt="Bounce GIF">
+        <img src="src/mega-bounce.gif" alt="Mega Bounce GIF">
+        <img src="src/gun.gif" alt="Intensifies GIF">
+        <img src="src/spin.gif" alt="Spin GIF">
+        <img src="src/tilt.gif" alt="Tilt GIF">
+        <img src="src/intensifies.gif" alt="Intensifies GIF">
+        <img src="src/spin.gif" alt="Intensifies GIF">
+        <img src="src/gun.gif" alt="Intensifies GIF">
+        
+    </div>
+</body>
+</html>
